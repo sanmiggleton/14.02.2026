@@ -27,7 +27,7 @@ body.locked{ overflow:hidden; }
 .bg{
   position: fixed;
   inset: 0;
-  background: url("assets/images/us.jpg") center/cover no-repeat;
+  background: url("assets/images/us.JPG") center/cover no-repeat;
   z-index: 0;
   transform: translateZ(0);
 }
