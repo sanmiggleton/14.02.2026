@@ -161,6 +161,7 @@ body.locked{ overflow:hidden; }
   border: 1px solid rgba(255,255,255,0.10);
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
+  margin: 0 auto; 
 }
 .player__top{
   display:flex;
@@ -245,6 +246,7 @@ body.locked{ overflow:hidden; }
   box-shadow: var(--shadow);
   backdrop-filter: blur(14px);
   text-align:center;
+  margin: 0 auto;  
 }
 .qcard__title{
   margin:0;
