@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>14.02.2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="locked">
+
+  <!-- LOADER -->
+  <div class="loader" id="loader" aria-label="Loading screen">
+    <div class="loader__center">
+      <div class="loader__frame" aria-hidden="true">
+        <img id="loaderImg" class="loader__img" src="assets/images/load1.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="progress" id="progress" aria-live="polite">
+      <div class="progress__pct"><span id="loaderPct">0</span>%</div>
+      <div class="progress__bar" aria-hidden="true"><span id="loaderBar"></span></div>
+    </div>
+
+    <div class="loader__bottom">
+      <button id="openBtn" class="openbtn" type="button" hidden>CLICK TO OPEN</button>
+      <div id="volumeMsg" class="loader__volume" hidden>turn your volume up</div>
+    </div>
+  </div>
+
+  <!-- Bottom pill nav (hidden until open) -->
+  <nav class="dotnav dotnav--bottom is-hidden" id="dotnav" aria-label="Sections">
+    <button class="dot active" data-target="#hero" aria-label="Go to hero"></button>
+    <button class="dot" data-target="#letter" aria-label="Go to letter"></button>
+    <button class="dot" data-target="#music" aria-label="Go to music"></button>
+    <button class="dot" data-target="#question" aria-label="Go to question"></button>
+  </nav>
+
+  <main class="snap">
+    <div class="bg" aria-hidden="true"></div>
+
+    <section id="hero" class="section hero" aria-label="Hero">
+      <div class="overlay overlay--hero"></div>
+      <div class="content">
+        <h1 class="hero__date">14.02.2026</h1>
+        <p class="hero__hint">Scroll ↓</p>
+      </div>
+    </section>
+
+    <section id="letter" class="section letter" aria-label="Letter">
+      <div class="overlay overlay--letter"></div>
+      <div class="content letter__wrap" role="article" aria-label="Letter to Raya">
+        <p class="letter__text">
+          <span class="letter__salute">Raya,</span><br><br>
+          I miss you. I miss the plans we had and the little things we were looking forward to.
+          At first it was hard not getting to celebrate them together.
+          But I’m really glad you’re there with your family, being present and making memories. That matters more than
+          anything.
+          Even if we’re an ocean apart this Valentine’s Day, you’re still the person I want beside me.
+        </p>
+        <p class="letter__sig">Love, Ryland</p>
+      </div>
+    </section>
+
+    <section id="music" class="section music" aria-label="Music">
+      <div class="overlay overlay--music"></div>
+
+      <div class="content">
+        <div class="player">
+          <div class="player__top">
+            <div class="art-wrap">
+              <img class="art spin" id="art" src="assets/images/the_promise.jpg" alt="Album art">
+              <div class="art-center"></div>
+            </div>
+
+            <div class="meta">
+              <div class="meta__artist" id="artist">Jay Park</div>
+              <div class="meta__title" id="title">The Promise</div>
+            </div>
+          </div>
+
+          <div class="player__mid">
+            <div class="bar">
+              <span class="time" id="timeNow">0:00</span>
+              <input id="seek" class="seek" type="range" min="0" max="100" value="0" aria-label="Seek">
+              <span class="time" id="timeEnd">0:00</span>
+            </div>
+
+            <div class="controls">
+              <button class="btn" id="prev" aria-label="Previous track">Prev</button>
+              <button class="btn btn--primary" id="play" aria-label="Play or pause">Play</button>
+              <button class="btn" id="next" aria-label="Next track">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <audio id="audio" preload="auto"></audio>
+    </section>
+
+    <section id="question" class="section question" aria-label="Valentine Question">
+      <div class="overlay overlay--question"></div>
+
+      <div class="content">
+        <div class="qcard">
+          <h2 class="qcard__title" id="qTitle">Will you be my Valentine?</h2>
+
+          <div class="qcard__buttons">
+            <button class="btn btn--primary" id="yesBtn">Yes</button>
+            <button class="btn" id="noBtn">No</button>
+          </div>
+
+          <p class="qcard__sub" id="qSub">Choose carefully…</p>
+        </div>
+      </div>
+
+      <div class="hearts" id="hearts" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
